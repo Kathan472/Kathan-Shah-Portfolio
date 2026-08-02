@@ -68,11 +68,556 @@
     section {
       animation: fadeIn 0.6s ease-out;
     }
+
+    /* 5. Navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: rgba(13, 17, 23, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    
+    .navbar.scrolled {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-secondary);
+    }
+
+    /* 6. Layout */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 5rem 0;
+    }
+
+    /* 7. Hero Section */
+    .hero {
+      padding: 7rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* 8. Buttons */
+    .button-group {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+      padding: 0 32px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      color: var(--bg-primary);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.02);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(88, 166, 255, 0.6);
+    }
+
+    /* 9. About Section */
+    .about-section h2, .experience-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card {
+      background: rgba(88, 166, 255, 0.08);
+      border: 1px solid rgba(88, 166, 255, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 2rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .info-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* 10. Experience Section */
+    .experience-section {
+      padding-top: 2rem;
+    }
+
+    .experience-item {
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-title h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .experience-company {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .experience-date {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .experience-bullets {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .experience-bullets li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .experience-bullets li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 16px;
+    }
+
+    /* 11. Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: rgba(88, 166, 255, 0.04);
+      border: 1px solid rgba(88, 166, 255, 0.12);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      background: rgba(88, 166, 255, 0.09);
+      border-color: rgba(88, 166, 255, 0.2);
+    }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .project-subtitle {
+      font-size: 12px;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+    }
+
+    .project-description {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tag {
+      background: rgba(88, 166, 255, 0.1);
+      color: var(--accent);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    .project-links a {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      transition: color 0.2s ease;
+    }
+
+    .project-links a:hover {
+      color: var(--accent-light);
+    }
+
+    /* 12. Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .skill-category-title {
+      font-size: 14px;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    /* 13. Responsive Adjustments */
+    @media (max-width: 768px) {
+      .projects-grid, .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-grid { gap: 2rem; }
+    }
+    @media (max-width: 480px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 { font-size: 42px; }
+      .button-group { flex-direction: column; }
+      .btn { width: 100%; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Content will go here in Phase 2+ -->
+  <nav class="navbar">
+    <a href="#" class="logo">ks</a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#experience">experience</a>
+      <a href="#projects">projects</a>
+    </div>
+  </nav>
 
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h1>Crafting intelligent systems.</h1>
+      <p class="hero-subtitle">CS student at Clemson with AI & Finance minors building full-stack applications</p>
+      <div class="button-group">
+        <a href="https://github.com/Kathan472" target="_blank" class="btn btn-primary">GitHub</a>
+        <a href="mailto:contact@kathan-shah.dev" class="btn btn-secondary">Email Me</a>
+      </div>
+    </section>
+
+    <!-- Content will go here in Phase 3+ -->
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a first-generation student from Union, SC, currently pursuing a CS Major with an AI Minor at Clemson University.</p>
+          <p>I am passionate about building systems that scale and focused on shipping code that works—whether optimizing backend systems, training ML models, or building full-stack applications.</p>
+          <p>When I'm not coding, you'll find me gaming, watching anime, or relaxing at cafes. I believe the best developers are well-rounded and know when to step away to recharge.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-item">
+            <span class="info-label">GPA</span>
+            <span class="info-value">4.0 / 4.0</span>
+            <span class="info-subtitle">Clemson University</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Status</span>
+            <span class="info-value">Available</span>
+            <span class="info-subtitle">For SWE Internships</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+      <h2>Experience</h2>
+      <div id="experience-container"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <div id="projects-container" class="projects-grid"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2>Technical Skills</h2>
+      <div id="skills-container" class="skills-grid"></div>
+    </section>
+
+    <!-- Content will go here in Phase 5+ -->
+  </main>
+
+  <script>
+    // --- Portfolio Data ---
+    const portfolioData = {
+      experience: [
+        {
+          title: "Registrar's Assistant",
+          company: "Tri County Technical College",
+          date: "Sep 2024 - Nov 2025",
+          bullets: [
+            "Achieved 100% accuracy on 5,000+ records through meticulous attention to detail.",
+            "Optimized processes to achieve 35% faster document retrieval.",
+            "Implemented new checking procedures resulting in a 78% error reduction."
+          ]
+        }
+      ],
+      projects: [
+        {
+          title: "CodeMentor AI",
+          subtitle: "Full-stack AI application",
+          description: "Real-time intelligent code explanation engine supporting 11 programming languages. Uses intelligent LLM routing to select the best model for each code snippet. Features Monaco Editor for syntax highlighting, TiDB database for persistent storage, and SSE streaming for live explanations.",
+          tags: ["FastAPI", "LLM Routing", "Monaco Editor", "TiDB", "SSE"],
+          github: "https://github.com/Kathan472/CodeMentorAI",
+          demo: "#"
+        },
+        {
+          title: "FinPulse",
+          subtitle: "Full-stack ML-powered analytics platform",
+          description: "Financial analytics platform combining high-performance data processing with ML predictions. Built C++17 backend for real-time market data ingestion. Implemented RandomForest and IsolationForest models for price prediction and anomaly detection.",
+          tags: ["C++17", "Python (ML)", "Next.js", "TiDB"],
+          github: "https://github.com/Kathan472/FinPulse",
+          demo: "#"
+        },
+        {
+          title: "CUTRACKIT",
+          subtitle: "Real-time sports check-in backend",
+          description: "Robust check-in system built for live event. Implemented secure QR code generation and real-time validation. Designed JWT authentication with bcrypt for security. Optimized database connection pooling for high concurrency.",
+          tags: ["Flask", "JWT Auth", "PostgreSQL", "QR Codes"],
+          github: "https://github.com/Kathan472/CUTRACKIT",
+          demo: "#"
+        },
+        {
+          title: "Basketball Analytics System",
+          subtitle: "High-performance event processing engine",
+          description: "C++ system engineered for processing 500+ game events efficiently. Implemented polymorphic inheritance hierarchy for different event types. Used custom data structures for optimal performance.",
+          tags: ["C++17", "Data Structures", "OOP Design", "Memory Opt"],
+          github: "https://github.com/Kathan472/Basketball-Analytics"
+        }
+      ],
+      skills: {
+        "Languages": ["Java", "Python", "C/C++", "SQL"],
+        "Frameworks": ["FastAPI", "Flask", "SQLAlchemy"],
+        "Tools": ["Git", "GitHub", "VS Code", "TiDB", "Supabase"],
+        "Platforms": ["Vercel", "Render", "Docker"]
+      }
+    };
+
+    // --- Dynamic Rendering ---
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Render Experience
+      const expContainer = document.getElementById("experience-container");
+      if (expContainer) {
+        expContainer.innerHTML = portfolioData.experience.map(exp => `
+          <div class="experience-item">
+            <div class="experience-header">
+              <div class="experience-title">
+                <h3>${exp.title}</h3>
+                <span class="experience-company">${exp.company}</span>
+              </div>
+              <div class="experience-date">${exp.date}</div>
+            </div>
+            <ul class="experience-bullets">
+              ${exp.bullets.map(b => `<li>${b}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('');
+      }
+
+      // 2. Render Projects
+      const projContainer = document.getElementById("projects-container");
+      if (projContainer) {
+        projContainer.innerHTML = portfolioData.projects.map(proj => `
+          <div class="project-card">
+            <div class="project-title">${proj.title}</div>
+            <div class="project-subtitle">${proj.subtitle}</div>
+            <p class="project-description">${proj.description}</p>
+            <div class="tech-tags">
+              ${proj.tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
+            </div>
+            <div class="project-links">
+              ${proj.github ? `<a href="${proj.github}" target="_blank">GitHub →</a>` : ''}
+              ${proj.demo ? `<a href="${proj.demo}" target="_blank">Live Demo →</a>` : ''}
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 3. Render Skills
+      const skillsContainer = document.getElementById("skills-container");
+      if (skillsContainer) {
+        skillsContainer.innerHTML = Object.entries(portfolioData.skills).map(([category, skills]) => `
+          <div class="skill-category">
+            <h3 class="skill-category-title">${category}</h3>
+            <div class="tech-tags">
+              ${skills.map(skill => `<span class="tech-tag">${skill}</span>`).join('')}
+            </div>
+          </div>
+        `).join('');
+      }
+      
+      // 4. Nav scroll effect
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.navbar');
+        if (window.scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+      
+      // 5. Logo click scroll to top
+      const logo = document.querySelector('.logo');
+      if(logo) {
+         logo.addEventListener('click', (e) => {
+           e.preventDefault();
+           window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+      }
+    });
+  </script>
 </body>
 </html>
