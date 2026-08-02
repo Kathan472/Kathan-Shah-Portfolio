@@ -412,6 +412,56 @@
       }
       .about-grid { gap: 2rem; }
     }
+    /* 14. Footer / Contact Section */
+    .footer {
+      padding: 6rem 0 3rem;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      margin-top: 2rem;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer h2 {
+      font-size: 32px;
+      margin-bottom: 1rem;
+    }
+
+    .footer p {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-credit {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
     @media (max-width: 480px) {
       .skills-grid {
         grid-template-columns: 1fr;
@@ -450,9 +500,9 @@
       <h2>About Me</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a first-generation student from Union, SC, currently pursuing a CS Major with an AI Minor at Clemson University.</p>
+          <p>I'm a Computer Science major with an AI Minor at Clemson University.</p>
           <p>I am passionate about building systems that scale and focused on shipping code that works—whether optimizing backend systems, training ML models, or building full-stack applications.</p>
-          <p>When I'm not coding, you'll find me gaming, watching anime, or relaxing at cafes. I believe the best developers are well-rounded and know when to step away to recharge.</p>
+          <p>When I'm not coding, you'll find me gaming, watching movies, or relaxing at cafes.</p>
         </div>
         <div class="info-card">
           <div class="info-item">
@@ -487,7 +537,23 @@
       <div id="skills-container" class="skills-grid"></div>
     </section>
 
-    <!-- Content will go here in Phase 5+ -->
+    <!-- Contact Section / Footer -->
+    <section id="contact" class="footer">
+      <div class="footer-content">
+        <h2>Get In Touch</h2>
+        <p>I'm currently looking for SWE internships. Feel free to reach out for collaborations or just a friendly hello!</p>
+        <div class="footer-links">
+          <a href="mailto:contact@kathan-shah.dev" class="btn btn-primary">Say Hello</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Kathan472" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/kathan-shah" target="_blank">LinkedIn</a>
+        </div>
+        <div class="footer-credit">
+          <p>Designed & Built by Kathan Shah</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script>
@@ -539,9 +605,9 @@
         }
       ],
       skills: {
-        "Languages": ["Java", "Python", "C/C++", "SQL"],
+        "Languages": ["Java", "Python", "C++", "SQL"],
         "Frameworks": ["FastAPI", "Flask", "SQLAlchemy"],
-        "Tools": ["Git", "GitHub", "VS Code", "TiDB", "Supabase"],
+        "Tools": ["Git", "GitHub", "VS Code", "Intellij", "TiDB", "Supabase"],
         "Platforms": ["Vercel", "Render", "Docker"]
       }
     };
