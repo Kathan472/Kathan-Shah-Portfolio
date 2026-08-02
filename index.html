@@ -198,16 +198,20 @@
       margin-bottom: 2.5rem;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
+    .about-card {
+      background: rgba(20, 24, 34, 0.65);
+      border: 1px solid rgba(88, 166, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 3rem;
+      border-radius: 16px;
+      max-width: 900px;
     }
 
     .about-text {
-      font-size: 14px;
-      line-height: 1.8;
+      font-size: 16px;
+      line-height: 1.9;
       color: var(--text-secondary);
     }
 
@@ -215,41 +219,13 @@
       margin-bottom: 1.5rem;
     }
 
-    .info-card {
-      background: rgba(88, 166, 255, 0.08);
-      border: 1px solid rgba(88, 166, 255, 0.15);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 2rem;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .about-text p:last-child {
+      margin-bottom: 0;
     }
 
-    .info-item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .info-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-
-    .info-value {
-      font-size: 15px;
-      font-weight: 700;
+    .about-text strong {
       color: var(--text-primary);
-    }
-
-    .info-subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
+      font-weight: 700;
     }
 
     /* 10. Experience Section */
@@ -404,13 +380,13 @@
 
     /* 13. Responsive Adjustments */
     @media (max-width: 768px) {
-      .projects-grid, .about-grid {
+      .projects-grid {
         grid-template-columns: 1fr;
       }
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .about-grid { gap: 2rem; }
+      .about-card { padding: 2rem; }
     }
     /* 14. Footer / Contact Section */
     .footer {
@@ -475,11 +451,11 @@
 <body>
 
   <nav class="navbar">
-    <a href="#" class="logo">ks</a>
+    <a href="#" class="logo">Kathan Shah</a>
     <div class="nav-links">
-      <a href="#about">about</a>
-      <a href="#experience">experience</a>
-      <a href="#projects">projects</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
     </div>
   </nav>
 
@@ -487,10 +463,10 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
       <h1>Crafting intelligent systems.</h1>
-      <p class="hero-subtitle">CS student at Clemson with AI & Finance minors building full-stack applications</p>
+      <p class="hero-subtitle">CS student at Clemson University with AI & Finance minors building full-stack applications</p>
       <div class="button-group">
         <a href="https://github.com/Kathan472" target="_blank" class="btn btn-primary">GitHub</a>
-        <a href="mailto:contact@kathan-shah.dev" class="btn btn-secondary">Email Me</a>
+        <a href="mailto:shahkathan20@gmail.com" class="btn btn-secondary">Email Me</a>
       </div>
     </section>
 
@@ -498,23 +474,11 @@
     <!-- About Section -->
     <section id="about" class="about-section">
       <h2>About Me</h2>
-      <div class="about-grid">
+      <div class="about-card">
         <div class="about-text">
-          <p>I'm a Computer Science major with an AI Minor at Clemson University.</p>
-          <p>I am passionate about building systems that scale and focused on shipping code that works—whether optimizing backend systems, training ML models, or building full-stack applications.</p>
-          <p>When I'm not coding, you'll find me gaming, watching movies, or relaxing at cafes.</p>
-        </div>
-        <div class="info-card">
-          <div class="info-item">
-            <span class="info-label">GPA</span>
-            <span class="info-value">4.0 / 4.0</span>
-            <span class="info-subtitle">Clemson University</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">Status</span>
-            <span class="info-value">Available</span>
-            <span class="info-subtitle">For SWE Internships</span>
-          </div>
+          <p>Hi, I'm <strong>Kathan Shah</strong>, a Computer Science major with a minor in AI at Clemson University. I'm deeply passionate about bridging the gap between complex algorithms and practical, scalable software solutions.</p>
+          <p>My journey in tech revolves around a relentless focus on shipping code that works. Whether I'm architecting a robust C++ data processing engine, implementing intelligent LLM routing strategies, or building responsive full-stack web applications, I thrive on tackling challenging problems across the entire stack.</p>
+          <p>I am currently looking for Software Engineering internships where I can contribute to impactful projects. When I'm not deep into code, you'll likely find me gaming, watching movies, or exploring new local cafes.</p>
         </div>
       </div>
     </section>
@@ -543,11 +507,11 @@
         <h2>Get In Touch</h2>
         <p>I'm currently looking for SWE internships. Feel free to reach out for collaborations or just a friendly hello!</p>
         <div class="footer-links">
-          <a href="mailto:contact@kathan-shah.dev" class="btn btn-primary">Say Hello</a>
+          <a href="mailto:shahkathan20@gmail.com" class="btn btn-primary">Say Hello</a>
         </div>
         <div class="social-links">
           <a href="https://github.com/Kathan472" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/kathan-shah" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/kathan-shah-49919131a/" target="_blank">LinkedIn</a>
         </div>
         <div class="footer-credit">
           <p>Designed & Built by Kathan Shah</p>
@@ -578,7 +542,7 @@
           description: "Real-time intelligent code explanation engine supporting 11 programming languages. Uses intelligent LLM routing to select the best model for each code snippet. Features Monaco Editor for syntax highlighting, TiDB database for persistent storage, and SSE streaming for live explanations.",
           tags: ["FastAPI", "LLM Routing", "Monaco Editor", "TiDB", "SSE"],
           github: "https://github.com/Kathan472/CodeMentorAI",
-          demo: "#"
+          demo: "https://codementorai-gd4s.onrender.com/"
         },
         {
           title: "FinPulse",
@@ -586,22 +550,22 @@
           description: "Financial analytics platform combining high-performance data processing with ML predictions. Built C++17 backend for real-time market data ingestion. Implemented RandomForest and IsolationForest models for price prediction and anomaly detection.",
           tags: ["C++17", "Python (ML)", "Next.js", "TiDB"],
           github: "https://github.com/Kathan472/FinPulse",
-          demo: "#"
+          demo: "https://web-my-projects-1711.vercel.app/"
         },
         {
           title: "CUTRACKIT",
           subtitle: "Real-time sports check-in backend",
           description: "Robust check-in system built for live event. Implemented secure QR code generation and real-time validation. Designed JWT authentication with bcrypt for security. Optimized database connection pooling for high concurrency.",
           tags: ["Flask", "JWT Auth", "PostgreSQL", "QR Codes"],
-          github: "https://github.com/Kathan472/CUTRACKIT",
-          demo: "#"
+          github: "https://github.com/levib4231/CUhackit-Project",
+          demo: "https://cuhackit-project.vercel.app/"
         },
         {
           title: "Basketball Analytics System",
           subtitle: "High-performance event processing engine",
           description: "C++ system engineered for processing 500+ game events efficiently. Implemented polymorphic inheritance hierarchy for different event types. Used custom data structures for optimal performance.",
           tags: ["C++17", "Data Structures", "OOP Design", "Memory Opt"],
-          github: "https://github.com/Kathan472/Basketball-Analytics"
+          github: "https://github.com/Kathan472/Basketball-Analytics-System"
         }
       ],
       skills: {
