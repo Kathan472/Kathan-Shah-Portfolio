@@ -37,6 +37,7 @@
     /* 3. Global Typography & Base Styles */
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -255,6 +256,58 @@
       font-weight: 700;
     }
 
+    /* 9.5 Education Section */
+    .education-section {
+      padding-top: 2rem;
+    }
+
+    .education-card {
+      padding: 1.5rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+    }
+
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .education-title h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #818cf8;
+      display: flex;
+      align-items: center;
+    }
+
+    .clemson-logo {
+      height: 20px;
+      margin-left: 8px;
+    }
+
+    .education-degree {
+      font-size: 14px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .education-meta {
+      text-align: right;
+    }
+
+    .education-location {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .education-date {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
     /* 10. Experience Section */
     .experience-section {
       padding-top: 2rem;
@@ -447,6 +500,13 @@
         grid-template-columns: repeat(2, 1fr);
       }
       .about-card { padding: 2rem; }
+      .education-header {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .education-meta {
+        text-align: left;
+      }
     }
     /* 14. Footer / Contact Section */
     .footer {
@@ -514,8 +574,10 @@
     <a href="#" class="logo">Kathan Shah</a>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
     </div>
   </nav>
 
@@ -544,6 +606,23 @@
           <p>Hi, I'm <strong>Kathan Shah</strong>, a Computer Science major with a minor in AI at Clemson University. I'm deeply passionate about bridging the gap between complex algorithms and practical, scalable software solutions.</p>
           <p>My journey in tech revolves around a relentless focus on shipping code that works. Whether I'm architecting a robust C++ data processing engine, implementing intelligent LLM routing strategies, or building responsive full-stack web applications, I thrive on tackling challenging problems across the entire stack.</p>
           <p>I am currently looking for Software Engineering internships where I can contribute to impactful projects. When I'm not deep into code, you'll likely find me gaming, watching movies, or exploring new local cafes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+      <h2>Education</h2>
+      <div class="education-card">
+        <div class="education-header">
+          <div class="education-title">
+            <h3>Clemson University <img src="clemson-logo.png" alt="Clemson Logo" class="clemson-logo"></h3>
+            <span class="education-degree">B.S. in Computer Science &mdash; GPA 4.0</span>
+          </div>
+          <div class="education-meta">
+            <div class="education-location">Clemson, SC</div>
+            <div class="education-date">Spring 2026 - Expected May 2028</div>
+          </div>
         </div>
       </div>
     </section>
