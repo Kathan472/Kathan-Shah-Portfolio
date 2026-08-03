@@ -2,7 +2,7 @@
 
 Welcome to my portfolio repository! This is the source code for my personal website, where I showcase my journey.
 
-🌐 Live Site: [Pending Deployment]
+🌐 Live Site: kathan-shah-portfolio-75af.vercel.app
 
 ## 🌟 Features
 
