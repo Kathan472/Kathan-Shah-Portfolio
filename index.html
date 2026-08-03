@@ -127,12 +127,12 @@
     }
 
     section {
-      padding: 5rem 0;
+      padding: 2.5rem 0;
     }
 
     /* 7. Hero Section */
     .hero {
-      padding: 7rem 0 3rem;
+      padding: 4rem 0 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -235,6 +235,14 @@
       padding: 3rem;
       border-radius: 16px;
       max-width: 900px;
+      transition: all 0.3s ease;
+    }
+
+    .about-card:hover {
+      background: rgba(25, 30, 42, 0.75);
+      border-color: rgba(88, 166, 255, 0.25);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
     }
 
     .about-text {
@@ -257,15 +265,22 @@
     }
 
     /* 9.5 Education Section */
-    .education-section {
-      padding-top: 2rem;
-    }
-
     .education-card {
       padding: 1.5rem 2rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
+      background: rgba(20, 24, 34, 0.65);
+      border: 1px solid rgba(88, 166, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .education-card:hover {
+      background: rgba(25, 30, 42, 0.75);
+      border-color: rgba(88, 166, 255, 0.25);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
     }
 
     .education-header {
@@ -309,15 +324,22 @@
     }
 
     /* 10. Experience Section */
-    .experience-section {
-      padding-top: 2rem;
-    }
-
     .experience-item {
       padding: 2rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
+      background: rgba(20, 24, 34, 0.65);
+      border: 1px solid rgba(88, 166, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+      background: rgba(25, 30, 42, 0.75);
+      border-color: rgba(88, 166, 255, 0.25);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
     }
 
     .experience-header {
@@ -374,8 +396,11 @@
     }
 
     .project-card {
-      background: rgba(88, 166, 255, 0.04);
+      background: rgba(20, 24, 34, 0.65);
       border: 1px solid rgba(88, 166, 255, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       padding: 2rem;
       border-radius: 12px;
       transition: all 0.3s ease;
@@ -384,8 +409,10 @@
     }
 
     .project-card:hover {
-      background: rgba(88, 166, 255, 0.09);
-      border-color: rgba(88, 166, 255, 0.2);
+      background: rgba(25, 30, 42, 0.75);
+      border-color: rgba(88, 166, 255, 0.25);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
     }
 
     .project-title {
@@ -452,8 +479,9 @@
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
+      align-items: start;
     }
 
     .skill-category-title {
@@ -529,28 +557,30 @@
       margin-bottom: 1rem;
     }
 
-    .footer p {
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      line-height: 1.8;
-    }
-
-    .social-links {
+    .social-links-icon {
       display: flex;
-      gap: 1.5rem;
-      margin: 3rem 0;
+      gap: 2rem;
+      margin: 2.5rem 0;
+      justify-content: center;
+      align-items: center;
     }
 
-    .social-links a {
+    .social-links-icon a {
       color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .social-links a:hover {
+    .social-links-icon a:hover {
       color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .social-links-icon svg {
+      width: 28px;
+      height: 28px;
     }
 
     .footer-credit {
@@ -586,11 +616,7 @@
     <section id="hero" class="hero">
       <div class="hero-content">
         <h1>Crafting intelligent systems.</h1>
-        <p class="hero-subtitle">CS student at Clemson University with AI & Finance minors building full-stack applications</p>
-        <div class="button-group">
-          <a href="https://github.com/Kathan472" target="_blank" class="btn btn-primary">GitHub</a>
-          <a href="mailto:shahkathan20@gmail.com" class="btn btn-secondary">Email Me</a>
-        </div>
+        <p class="hero-subtitle">CS student at Clemson University with a minor in AI</p>
       </div>
       <div class="hero-image">
         <img src="Headshots-2.17.26-EG-36.jpg" alt="Kathan Shah">
@@ -641,7 +667,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-      <h2>Technical Skills</h2>
+      <h2>Skills</h2>
       <div id="skills-container" class="skills-grid"></div>
     </section>
 
@@ -649,13 +675,16 @@
     <section id="contact" class="footer">
       <div class="footer-content">
         <h2>Get In Touch</h2>
-        <p>I'm currently looking for SWE internships. Feel free to reach out for collaborations or just a friendly hello!</p>
-        <div class="footer-links">
-          <a href="mailto:shahkathan20@gmail.com" class="btn btn-primary">Say Hello</a>
-        </div>
-        <div class="social-links">
-          <a href="https://github.com/Kathan472" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/kathan-shah-49919131a/" target="_blank">LinkedIn</a>
+        <div class="social-links-icon">
+          <a href="https://github.com/Kathan472" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kathan-shah-49919131a/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="mailto:shahkathan20@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
         </div>
         <div class="footer-credit">
           <p>Designed & Built by Kathan Shah</p>
@@ -673,50 +702,49 @@
           company: "Tri County Technical College",
           date: "Sep 2024 - Nov 2025",
           bullets: [
-            "Achieved 100% accuracy on 5,000+ records through meticulous attention to detail.",
-            "Optimized processes to achieve 35% faster document retrieval.",
-            "Implemented new checking procedures resulting in a 78% error reduction."
+            "Maintained 100% data accuracy across 5,000+ student records while adhering to FERPA compliance standards.",
+            "Reduced document retrieval time by 35% through digitizing 8,000+ records into hierarchical structure, improving operational efficiency during peak enrollment.",
+            "Established QA process reducing data entry errors by 78% through systematic verification. Trained new staff members on standardized procedures."
           ]
         }
       ],
       projects: [
         {
           title: "CodeMentor AI",
-          subtitle: "Full-stack AI application",
-          description: "Real-time intelligent code explanation engine supporting 11 programming languages. Uses intelligent LLM routing to select the best model for each code snippet. Features Monaco Editor for syntax highlighting, TiDB database for persistent storage, and SSE streaming for live explanations.",
-          tags: ["FastAPI", "LLM Routing", "Monaco Editor", "TiDB", "SSE"],
+          subtitle: "AI-Powered Code Explanation Engine",
+          description: "Engineered a robust FastAPI platform supporting 11 programming languages with AI-powered code explanations and real-time Server-Sent Events (SSE) streaming. Implemented a custom multi-model AI router to dynamically select optimal LLMs (Open Router, NVIDIA, Gemini), achieving sub-100ms response times with zero infrastructure costs. Integrated the Monaco Editor featuring a live execution sandbox, protected by CORS security, process isolation, and strict input sanitization.",
+          tags: ["Python", "FastAPI", "JavaScript", "MySQL", "TiDB Cloud", "Render"],
           github: "https://github.com/Kathan472/CodeMentorAI",
           demo: "https://codementorai-gd4s.onrender.com/"
         },
         {
           title: "FinPulse",
-          subtitle: "Full-stack ML-powered analytics platform",
-          description: "Financial analytics platform combining high-performance data processing with ML predictions. Built C++17 backend for real-time market data ingestion. Implemented RandomForest and IsolationForest models for price prediction and anomaly detection.",
-          tags: ["C++17", "Python (ML)", "Next.js", "TiDB"],
+          subtitle: "High-Performance Financial Analytics Platform",
+          description: "Developed a high-performance financial analytics platform combining a C++17 multi-threaded market data ingestion engine with a responsive Next.js 14 dashboard. Achieved 78% directional accuracy in price predictions by training Random Forest and Isolation Forest machine learning models on over 50,000 historical price points. Designed the system with lock-free ring buffers, sub-100ms latency, and a scalable Flask REST API featuring SQLAlchemy connection pooling.",
+          tags: ["C++17", "Python (ML)", "Next.js", "Scikit-Learn", "MySQL", "Vercel"],
           github: "https://github.com/Kathan472/FinPulse",
           demo: "https://web-my-projects-1711.vercel.app/"
         },
         {
           title: "CUTRACKIT",
-          subtitle: "Real-time sports check-in backend",
-          description: "Robust check-in system built for live event. Implemented secure QR code generation and real-time validation. Designed JWT authentication with bcrypt for security. Optimized database connection pooling for high concurrency.",
-          tags: ["Flask", "JWT Auth", "PostgreSQL", "QR Codes"],
+          subtitle: "Real-Time Sports Check-In System",
+          description: "Architected the Flask backend for a real-time sports check-in application built during a 24-hour hackathon. Designed a modular API architecture that enabled parallel frontend and backend development with a clean separation of concerns. Implemented robust database connection pooling, query optimization, and secure JWT authentication with bcrypt password hashing for real-time QR code validation.",
+          tags: ["Python", "Flask", "PostgreSQL", "Supabase", "Vercel"],
           github: "https://github.com/levib4231/CUhackit-Project",
           demo: "https://cuhackit-project.vercel.app/"
         },
         {
           title: "Basketball Analytics System",
-          subtitle: "High-performance event processing engine",
-          description: "C++ system engineered for processing 500+ game events efficiently. Implemented polymorphic inheritance hierarchy for different event types. Used custom data structures for optimal performance.",
-          tags: ["C++17", "Data Structures", "OOP Design", "Memory Opt"],
+          subtitle: "High-Performance Event Processing Engine",
+          description: "Engineered a high-performance C++ event processing system capable of handling 500+ complex game events. Implemented advanced data structures—including dynamic arrays and linked lists—along with a polymorphic inheritance hierarchy and an abstract base class to significantly reduce code duplication. Optimized memory management to achieve a 35% reduction in peak heap usage and developed recursive algorithms for efficient game analysis reporting.",
+          tags: ["C++17", "Data Structures", "Algorithms", "Memory Management"],
           github: "https://github.com/Kathan472/Basketball-Analytics-System"
         }
       ],
       skills: {
         "Languages": ["Java", "Python", "C++", "SQL"],
-        "Frameworks": ["FastAPI", "Flask", "SQLAlchemy"],
-        "Tools": ["Git", "GitHub", "VS Code", "Intellij", "TiDB", "Supabase"],
-        "Platforms": ["Vercel", "Render", "Docker"]
+        "Frameworks & Libraries": ["FastAPI", "Flask", "SQLAlchemy", "Scikit-learn", "NumPy", "Pandas"],
+        "Tools & Platforms": ["Git", "GitHub", "VS Code", "MySQL", "Intellij", "TiDB", "Supabase", "Vercel", "Render", "Docker"]
       }
     };
 
@@ -729,8 +757,8 @@
           <div class="experience-item">
             <div class="experience-header">
               <div class="experience-title">
-                <h3>${exp.title}</h3>
-                <span class="experience-company">${exp.company}</span>
+                <h3>${exp.company}</h3>
+                <span class="experience-company">${exp.title}</span>
               </div>
               <div class="experience-date">${exp.date}</div>
             </div>
