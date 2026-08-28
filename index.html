@@ -337,6 +337,12 @@
     }
 
     /* 10. Experience Section */
+    #experience-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
     .experience-item {
       padding: 2rem;
       background: rgba(20, 24, 34, 0.65);
@@ -709,9 +715,21 @@
     const portfolioData = {
       experience: [
         {
+          title: "Undergraduate Teaching Assistant",
+          company: "Clemson University – School of Computing",
+          location: "Clemson, SC",
+          date: "August 2026 - Present",
+          bullets: [
+            "Support 20 students during weekly Python labs by explaining programming concepts, troubleshooting code, and guiding hands-on programming assignments.",
+            "Provide individualized support during office hours by diagnosing programming errors and guiding students through debugging and problem-solving approaches.",
+            "Prepare weekly labs, evaluate assignments using established rubrics, and collaborate with the lead TA/course instructor to provide constructive feedback on student challenges and lab materials."
+          ]
+        },
+        {
           title: "Registrar's Assistant",
           company: "Tri County Technical College",
-          date: "Sep 2024 - Nov 2025",
+          location: "Pendleton, SC",
+          date: "September 2024 - November 2025",
           bullets: [
             "Maintained 100% data accuracy across 5,000+ student records while adhering to FERPA compliance standards.",
             "Reduced document retrieval time by 35% through digitizing 8,000+ records into hierarchical structure, improving operational efficiency during peak enrollment.",
@@ -771,7 +789,10 @@
                 <h3>${exp.company}</h3>
                 <span class="experience-company">${exp.title}</span>
               </div>
-              <div class="experience-date">${exp.date}</div>
+              <div class="experience-meta" style="text-align: right;">
+                <div class="experience-date" style="margin-bottom: 4px;">${exp.date}</div>
+                ${exp.location ? `<div class="experience-location" style="font-size: 13px; color: var(--text-muted);">${exp.location}</div>` : ''}
+              </div>
             </div>
             <ul class="experience-bullets">
               ${exp.bullets.map(b => `<li>${b}</li>`).join('')}
